@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.upload-section, .records-section {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#uploadStatus {
+    margin-top: 10px;
+    color: #333;
+}
+/* Summary Section Styles */
+.summary-section {
+    margin: 20px 0;
+}
+
+#summaryData p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.chart-container {
+    margin: 20px 0;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.download-section {
+    margin: 20px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIC Validation System</title>
+    <link rel="stylesheet" href="stylsheet.css">
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  -->
+
+</head>
+<body>
+<div class="container">
+    <h1>NIC Validation System</h1>
+
+    <!-- File Upload Section -->
+    <div class="upload-section">
+        <h2>Upload CSV Files</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput1">CSV File 1:</label>
+            <input type="file" id="fileInput1" name="file1" accept=".csv">
+
+            <label for="fileInput2">CSV File 2:</label>
+            <input type="file" id="fileInput2" name="file2" accept=".csv">
+
+            <label for="fileInput3">CSV File 3:</label>
+            <input type="file" id="fileInput3" name="file3" accept=".csv">
+
+            <label for="fileInput4">CSV File 4:</label>
+            <input type="file" id="fileInput4" name="file4" accept=".csv">
+
+            <button type="submit">Upload</button>
+        </form>
+        <div id="uploadStatus"></div>
+    </div>
+
+    <!-- Display NIC Records -->
+    <div class="records-section">
+        <h2>Validated NIC Records</h2>
+        <table id="nicTable">
+            <thead>
+            <tr>
+                <th>NIC Number</th>
+                <th>Date of Birth</th>
+                <th>Age</th>
+                <th>Gender</th>
+
+            </tr>
+            </thead>
+            <tbody id="nicRecordsTable">
+            <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary-section">
+        <h2>System Summary</h2>
+        <div id="summaryData">
+            <p>Total Records: <span id="totalRecords"></span></p>
+            <p>Male Users: <span id="maleUsers"></span></p>
+            <p>Female Users: <span id="femaleUsers"></span></p>
+        </div>
+
+        <h3>Charts</h3>
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+<!--    <div class="download-section">-->
+<!--        <h2>Download Validated NIC Records</h2>-->
+<!--        <button id="downloadPDF">Download as PDF</button>-->
+<!--        <button id="downloadCSV">Download as CSV</button>-->
+<!--        <button id="downloadExcel">Download as Excel</button>-->
+<!--    </div>-->
+    <div class="download-section">
+        <h2>Download NIC Validation Report</h2>
+        <button onclick="downloadReport('pdf')">Download as PDF</button>
+        <button onclick="downloadReport('csv')">Download as CSV</button>
+        <button onclick="downloadReport('excel')">Download as Excel</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
